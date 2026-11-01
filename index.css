@@ -1,0 +1,166 @@
+:root {
+  --primary: #ede0d4;
+  --secondary: #e6ccb2;
+  --bg-main: #7f5539;
+  --text-dark: #352317;
+  --text-light: #ffffff;
+
+  --font-huge: 68px;
+  --font-big: 20px;
+  --font-normal: 16px;
+  --font-small: 14px;
+  --font-heading: "Lora";
+  --font-body: "Nunito";
+
+  --navbar-height: 75px;
+  --font-weight-navbar: 500;
+  --font-weight-hero-section-slogan: 700;
+  --font-weight-hero-section-general: 500;
+
+  --hero-section-height: calc(100vh - var(--navbar-height));
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+}
+
+button {
+  font: inherit;
+  background-color: var(--bg-main);
+  color: var(--text-light);
+
+  border-style: none;
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+=========================================
+   SHARED
+========================================= 
+*/
+
+.text-link-primary {
+  cursor: pointer;
+}
+
+.text-link-primary:hover {
+  text-decoration: underline;
+  color: var(--bg-main);
+}
+
+/* 
+=========================================
+   NAVBAR STYLES (INSIDE HEADER)
+========================================= 
+*/
+.navbar-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  background-color: var(--primary);
+  height: var(--navbar-height);
+
+  font-size: var(--font-small);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-navbar);
+}
+
+.navbar-main-links {
+  font: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 52%;
+  margin-right: 45px;
+}
+
+.navbar-main-logo {
+  min-width: 75px;
+  width: 75px;
+  margin-left: 45px;
+
+  align-self: center;
+}
+
+.navbar-order-now-button {
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+/* 
+=========================================
+   MAIN BODY: HERO SECTION
+========================================= 
+*/
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: var(--navbar-height);
+
+  background-image: url("images/herosection.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: var(--hero-section-height);
+}
+
+.hero-section-slogan {
+  color: var(--text-dark);
+  text-align: center;
+
+  font-family: var(--font-heading);
+  font-size: var(--font-huge);
+  font-weight: var(--font-weight-hero-section-slogan);
+
+  margin-bottom: 20px;
+}
+
+.hero-section-desc {
+  margin-bottom: 40px;
+  color: var(--text-dark);
+  text-align: center;
+
+  font-family: var(--font-heading);
+  font-size: var(--font-small);
+  font-weight: var(--font-weight-hero-section-general);
+}
+
+.hero-section-button {
+  padding: 10px 25px;
+  border-radius: 20px;
+
+  font-family: var(--font-heading);
+  font-size: var(--font-small);
+  font-weight: var(--font-weight-hero-section-general);
+}
