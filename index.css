@@ -1,29 +1,38 @@
 :root {
   --primary: #ede0d4;
   --secondary: #e6ccb2;
+  --tertiary: #ddb892;
   --bg-main: #7f5539;
   --text-dark: #352317;
   --text-light: #ffffff;
 
   --font-huge: 68px;
-  --font-big: 20px;
+  --font-big: 45px;
+  --font-xnormal: 24px;
   --font-normal: 16px;
   --font-small: 14px;
   --font-heading: "Lora";
-  --font-body: "Nunito";
 
   --navbar-height: 75px;
   --font-weight-navbar: 500;
   --font-weight-hero-section-slogan: 700;
   --font-weight-hero-section-general: 500;
 
+  --font-weight-about-section-heading: 500;
+  --font-weight-about-section-card-title: 500;
+
   --hero-section-height: calc(100vh - var(--navbar-height));
+  --about-section-height: calc(100vh - var(--navbar-height));
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--font-body);
+  font-family: var(--font-heading);
+}
+
+html {
+  scroll-padding-top: var(--navbar-height);
 }
 
 button {
@@ -87,7 +96,7 @@ p {
   background-color: var(--primary);
   height: var(--navbar-height);
 
-  font-size: var(--font-small);
+  font-size: var(--font-normal);
   font-family: var(--font-heading);
   font-weight: var(--font-weight-navbar);
 }
@@ -98,7 +107,7 @@ p {
   justify-content: space-between;
   align-items: center;
 
-  width: 52%;
+  width: 35%;
   margin-right: 45px;
 }
 
@@ -152,7 +161,7 @@ p {
   text-align: center;
 
   font-family: var(--font-heading);
-  font-size: var(--font-small);
+  font-size: var(--font-normal);
   font-weight: var(--font-weight-hero-section-general);
 }
 
@@ -163,4 +172,90 @@ p {
   font-family: var(--font-heading);
   font-size: var(--font-small);
   font-weight: var(--font-weight-hero-section-general);
+}
+
+/* 
+=========================================
+   MAIN BODY: ABOUT SECTION
+========================================= 
+*/
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 45px;
+  gap: 45px;
+  box-sizing: border-box;
+
+  height: var(--about-section-height);
+  background-color: var(--secondary);
+}
+
+.about-section-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-section-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about-section-description {
+  width: 100%;
+  text-wrap: wrap;
+  font-size: var(--font-normal);
+  margin-bottom: 25px;
+}
+
+.about-section-heading {
+  font-size: var(--font-big);
+  font-weight: var(--font-weight-about-section-heading);
+  margin-bottom: 25px;
+}
+
+.about-section-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
+
+.about-section-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-width: 0.1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+}
+
+.about-section-card-image {
+  width: 50%;
+  min-width: 50%;
+  height: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.about-section-card-title {
+  max-width: 80%;
+  font-weight: var(--font-weight-about-section-card-title);
+  font-size: var(--font-xnormal);
+  margin-bottom: 15px;
+}
+
+.about-section-card-desc {
+  max-width: 80%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.about-section-card-button {
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-size: var(--font-small);
+  margin-bottom: 15px;
+  width: 80%;
 }
