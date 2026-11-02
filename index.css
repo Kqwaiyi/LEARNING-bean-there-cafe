@@ -470,6 +470,24 @@ p {
 ========================================= 
 */
 footer {
+  display: grid;
+  grid-template-columns: minmax(200px, 5fr) minmax(130px, 1fr) minmax(
+      130px,
+      1fr
+    );
+  justify-items: end;
+  align-items: center;
+  padding-left: 45px;
+  padding-right: 45px;
+  box-sizing: border-box;
+  gap: 45px;
+
+  font-size: var(--font-small);
+
   min-height: var(--footer-height);
   background-color: var(--tertiary);
+}
+
+.footer-my-name {
+  justify-self: start;
 }
