@@ -8,7 +8,7 @@
 
   --font-huge: 68px;
   --font-big: 45px;
-  --font-xnormal: 24px;
+  --font-xnormal: 22px;
   --font-normal: 16px;
   --font-small: 14px;
   --font-heading: "Lora";
@@ -21,14 +21,18 @@
   --font-weight-about-section-heading: 500;
   --font-weight-about-section-card-title: 500;
 
+  --font-weight-menu-section-heading: 500;
+  --font-weight-menu-section-grid-item-heading: 600;
   --hero-section-height: calc(100vh - var(--navbar-height));
   --about-section-height: calc(100vh - var(--navbar-height));
+  --coffee-section-height: calc(100vh - var(--navbar-height));
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: var(--font-heading);
+  color: var(--text-dark);
 }
 
 html {
@@ -80,6 +84,13 @@ p {
   color: var(--bg-main);
 }
 
+.styled-hr {
+  border: none;
+  height: 0.7px;
+  background-color: var(--text-dark);
+  margin: 0;
+}
+
 /* 
 =========================================
    NAVBAR STYLES (INSIDE HEADER)
@@ -99,6 +110,14 @@ p {
   font-size: var(--font-normal);
   font-family: var(--font-heading);
   font-weight: var(--font-weight-navbar);
+}
+
+.navbar-hr {
+  position: fixed;
+  top: var(--navbar-height);
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navbar-main-links {
@@ -187,7 +206,7 @@ p {
   gap: 45px;
   box-sizing: border-box;
 
-  height: var(--about-section-height);
+  min-height: var(--about-section-height);
   background-color: var(--secondary);
 }
 
@@ -227,7 +246,7 @@ p {
 
   border-width: 0.1px;
   border-style: solid;
-  border-color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.15);
   border-radius: 7px;
 }
 
@@ -258,4 +277,92 @@ p {
   font-size: var(--font-small);
   margin-bottom: 15px;
   width: 80%;
+}
+
+/* 
+=========================================
+   MAIN BODY: MENU SECTION
+========================================= 
+*/
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: var(--coffee-section-height);
+  background-color: var(--primary);
+}
+
+.menu-section-heading {
+  font-size: var(--font-big);
+  font-weight: var(--font-weight-menu-section-heading);
+  margin-bottom: 15px;
+  margin-top: 0;
+
+  text-align: center;
+}
+
+.menu-section-text {
+  font-size: var(--font-normal);
+
+  text-align: center;
+}
+
+.menu-section-grid {
+  display: grid;
+  justify-content: center;
+  gap: 60px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 45px 45px 0;
+}
+
+@media (width <= 800px) {
+  .menu-section-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width <= 600px) {
+  .menu-section-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.menu-section-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-width: 0.1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.15);
+  border-radius: 7px;
+}
+
+.menu-section-grid-item-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+
+  margin-bottom: 25px;
+}
+
+.menu-cappucino-image {
+  object-position: center 70%;
+}
+
+.menu-croissant-image {
+  object-position: center 20%;
+}
+
+.menu-section-grid-item-heading {
+  font-weight: var(--font-weight-menu-section-grid-item-heading);
+  font-size: var(--font-xnormal);
+  margin-bottom: 7px;
+}
+
+.menu-section-grid-item-pricetag {
+  margin-bottom: 25px;
+  font-size: var(--font-small);
 }

@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bean There Cafe</title>
     <link rel="stylesheet" href="index.css" />
 
@@ -27,7 +29,7 @@
           <a href="#about">
             <span class="text-link-primary">About</span>
           </a>
-          <a>
+          <a href="#menu">
             <span class="text-link-primary">Menu</span>
           </a>
           <a>
@@ -36,6 +38,7 @@
           <button class="navbar-order-now-button">Order Online</button>
         </div>
       </nav>
+      <hr class="styled-hr navbar-hr" />
     </header>
 
     <main>
@@ -97,6 +100,48 @@
           alt="Bean There Cafe Picture"
           class="about-section-image"
         />
+      </section>
+      <section id="menu" class="menu-section">
+        <h1 class="menu-section-heading">Selected Menu</h1>
+        <p class="menu-section-text">
+          Handcrafted with love, made specially for you
+        </p>
+        <div class="menu-section-grid">
+          <div class="menu-section-grid-item">
+            <img
+              class="menu-section-grid-item-image menu-cappucino-image"
+              src="images/menu-cappucino.jpg"
+            />
+            <p class="menu-section-grid-item-heading">Cappuccino</p>
+            <p class="menu-section-grid-item-pricetag">$4.50</p>
+          </div>
+          <div class="menu-section-grid-item">
+            <img
+              class="menu-section-grid-item-image menu-croissant-image"
+              src="images/menu-croissant.jpg"
+            />
+            <p class="menu-section-grid-item-heading">Butter Croissant</p>
+            <p class="menu-section-grid-item-pricetag">$3.75</p>
+          </div>
+
+          <div class="menu-section-grid-item">
+            <img
+              class="menu-section-grid-item-image"
+              src="images/menu-matcha-latte.jpg"
+            />
+            <p class="menu-section-grid-item-heading">Matcha Latte</p>
+            <p class="menu-section-grid-item-pricetag">$5.25</p>
+          </div>
+
+          <div class="menu-section-grid-item">
+            <img
+              class="menu-section-grid-item-image"
+              src="images/menu-iced-latte.jpg"
+            />
+            <p class="menu-section-grid-item-heading">Iced Latte</p>
+            <p class="menu-section-grid-item-pricetag">$4.75</p>
+          </div>
+        </div>
       </section>
     </main>
   </body>
